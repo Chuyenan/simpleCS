@@ -16,6 +16,7 @@ public class ImgClient {
         while ((len = fis.read(bytes)) != -1){
             os.write(bytes, 0, len);
         }
+        //做了一些修改
         socket.shutdownOutput();
         InputStream is = socket.getInputStream();
         int callBack = is.read(bytes);
