@@ -13,6 +13,7 @@ public class ImgClient {
         OutputStream os = socket.getOutputStream();
         byte[] bytes = new byte[1024];
         int len;
+        int i;
         while ((len = fis.read(bytes)) != -1){
             os.write(bytes, 0, len);
         }
